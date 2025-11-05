@@ -26,31 +26,31 @@ Sistema completo de gerenciamento acadêmico desenvolvido com arquitetura em cam
 
 ```
 Trabalho-Desenv-Framework/
-├── screens/
-│   ├── BackEnd/
-│   │   ├── src/
-│   │   │   ├── config/           # Configurações (banco de dados)
-│   │   │   ├── controllers/      # Controladores das rotas
-│   │   │   ├── middlewares/      # Middlewares (autenticação)
-│   │   │   ├── models/           # Modelos do Sequelize
-│   │   │   ├── repositories/     # Camada de acesso a dados
-│   │   │   ├── routes/           # Definição de rotas
-│   │   │   └── services/         # Lógica de negócio
-│   │   ├── doc/                  # Documentação Swagger
-│   │   ├── index.js              # Arquivo principal do servidor
-│   │   ├── package.json          # Dependências do projeto
-│   │   └── Dockerfile            # Container Docker
-│   │
-│   └── FrontEnd/
-│       └── src/
-│           ├── login/            # Tela de autenticação
-│           ├── home/             # Dashboard principal
-│           ├── usuarios/         # Gerenciamento de usuários
-│           ├── professores/      # Gerenciamento de professores
-│           ├── alunos/           # Gerenciamento de alunos
-│           ├── disciplinas/      # Gerenciamento de disciplinas
-│           ├── tarefas/          # Gerenciamento de tarefas
-│           └── notas/            # Gerenciamento de notas
+├
+├── BackEnd/
+│   ├── src/
+│   │   ├── config/           # Configurações (banco de dados)
+│   │   ├── controllers/      # Controladores das rotas
+│   │   ├── middlewares/      # Middlewares (autenticação)
+│   │   ├── models/           # Modelos do Sequelize
+│   │   ├── repositories/     # Camada de acesso a dados
+│   │   ├── routes/           # Definição de rotas
+│   │   └── services/         # Lógica de negócio
+│   ├── doc/                  # Documentação Swagger
+│   ├── index.js              # Arquivo principal do servidor
+│   ├── package.json          # Dependências do projeto
+│   └── Dockerfile            # Container Docker
+│
+└── FrontEnd/
+    └── src/
+        ├── login/            # Tela de autenticação
+        ├── home/             # Dashboard principal
+        ├── usuarios/         # Gerenciamento de usuários
+        ├── professores/      # Gerenciamento de professores
+        ├── alunos/           # Gerenciamento de alunos
+        ├── disciplinas/      # Gerenciamento de disciplinas
+        ├── tarefas/          # Gerenciamento de tarefas
+        └── notas/            # Gerenciamento de notas
 ```
 
 ## 👥 Tipos de Usuário e Permissões
@@ -65,7 +65,6 @@ Trabalho-Desenv-Framework/
 
 ### 🟢 Professor
 - ✅ Visualizar e gerenciar disciplinas (CRUD completo)
-- ✅ Visualizar lista de alunos (somente leitura)
 - ✅ Gerenciar tarefas (CRUD completo)
 - ✅ Gerenciar notas (CRUD completo)
 
@@ -213,6 +212,6 @@ http://localhost:3000/api-docs
 O projeto inclui um Dockerfile para containerização do backend:
 
 ```bash
-docker build -t sistema-academico .
+docker build -t sistema-academico -f  .
 docker run -p 3000:3000 sistema-academico
 ```
